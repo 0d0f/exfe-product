@@ -1,0 +1,30 @@
+body,html {
+	margin: 0;
+}
+
+table {
+	width: 600px;
+	/background-color: red;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+th {
+	background-color: red;
+	width: 66px;
+	border-right: 2px solid white;
+}
+
+tr td {
+	height: 100px;
+}
+
+.column-right{
+	width: 500px;
+	background-color: #3a6ea5;
+}
+
+.inviter{
+	height: 30px;
+	color: white;
+}

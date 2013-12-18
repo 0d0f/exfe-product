@@ -1,0 +1,639 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Invitation
+  
+    &mdash; Documentation by YARD 0.7.2
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (I)</a> &raquo; 
+    
+    
+    <span class="title">Invitation</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Invitation
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">ActiveRecord::Base</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActiveRecord::Base</li>
+          
+            <li class="next">Invitation</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/models/invitation.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="PRIVATE_ATTRIBUTES-constant" class="">PRIVATE_ATTRIBUTES =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Private attributes which should only accessible by invited user.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
+        </dt>
+        <dd><pre class="code"><span class='dstring node'>%w(token)</span><span class='dot token'>.</span><span class='freeze identifier id'>freeze</span>
+</pre></dd>
+      
+    </dl>
+  
+
+
+  
+
+
+  
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#current-class_method" title="current (class method)">+ (Object) <strong>current</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Current invitation represent the credential of visit Exfe with an
+invitation token.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#current%3D-class_method" title="current= (class method)">+ (Object) <strong>current=</strong>(invitation) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#for_creator%3F-instance_method" title="#for_creator? (instance method)">- (Boolean) <strong>for_creator?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#generate_token-instance_method" title="#generate_token (instance method)">- (Object) <strong>generate_token</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#log_invitation_respond_maybe-instance_method" title="#log_invitation_respond_maybe (instance method)">- (Object) <strong>log_invitation_respond_maybe</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#log_invitation_respond_no-instance_method" title="#log_invitation_respond_no (instance method)">- (Object) <strong>log_invitation_respond_no</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#log_invitation_respond_yes-instance_method" title="#log_invitation_respond_yes (instance method)">- (Object) <strong>log_invitation_respond_yes</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#serializable_hash-instance_method" title="#serializable_hash (instance method)">- (Object) <strong>serializable_hash</strong>(options = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="current-class_method">
+  
+    + (<tt>Object</tt>) <strong>current</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Current invitation represent the credential of visit Exfe with an
+invitation token.</p>
+
+<p>When a user visit Exfe without login, but with an invitation token, we need
+to use the corresponding <tt>Invitation</tt> object to identify the user.
+Get abilities for the user via <tt>Ability.new(Invitation.current)</tt>.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="Ability.html#initialize-instance_method" title="Ability#initialize (method)">Ability#initialize</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/invitation.rb', line 46</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='current identifier id'>current</span>
+  <span class='Thread constant id'>Thread</span><span class='dot token'>.</span><span class='current identifier id'>current</span><span class='lbrack token'>[</span><span class='symbol val'>:current_invitation</span><span class='rbrack token'>]</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="current=-class_method">
+  
+    + (<tt>Object</tt>) <strong>current=</strong>(invitation) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/invitation.rb', line 50</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='current identifier id'>current</span><span class='assign token'>=</span><span class='lparen token'>(</span><span class='invitation identifier id'>invitation</span><span class='rparen token'>)</span>
+  <span class='Thread constant id'>Thread</span><span class='dot token'>.</span><span class='current identifier id'>current</span><span class='lbrack token'>[</span><span class='symbol val'>:current_invitation</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='invitation identifier id'>invitation</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="for_creator?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>for_creator?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/invitation.rb', line 66</span>
+
+<span class='def def kw'>def</span> <span class='for_creator? fid id'>for_creator?</span>
+  <span class='invited_user identifier id'>invited_user</span> <span class='eq op'>==</span> <span class='event identifier id'>event</span><span class='dot token'>.</span><span class='creator identifier id'>creator</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="generate_token-instance_method">
+  
+    - (<tt>Object</tt>) <strong>generate_token</strong>  <span class="extras">(private)</span>
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+84
+85
+86
+87
+88
+89</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/invitation.rb', line 84</span>
+
+<span class='def def kw'>def</span> <span class='generate_token identifier id'>generate_token</span>
+  <span class='loop identifier id'>loop</span> <span class='do do kw'>do</span>
+    <span class='self self kw'>self</span><span class='dot token'>.</span><span class='token identifier id'>token</span> <span class='assign token'>=</span> <span class='ActiveSupport constant id'>ActiveSupport</span><span class='colon2 op'>::</span><span class='SecureRandom constant id'>SecureRandom</span><span class='dot token'>.</span><span class='hex identifier id'>hex</span>
+    <span class='break break kw'>break</span> <span class='unless unless_mod kw'>unless</span> <span class='Invitation constant id'>Invitation</span><span class='dot token'>.</span><span class='exists? fid id'>exists?</span><span class='lparen token'>(</span><span class='symbol val'>:token</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='token identifier id'>token</span><span class='rparen token'>)</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="log_invitation_respond_maybe-instance_method">
+  
+    - (<tt>Object</tt>) <strong>log_invitation_respond_maybe</strong>  <span class="extras">(private)</span>
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+72
+73
+74</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/invitation.rb', line 72</span>
+
+<span class='def def kw'>def</span> <span class='log_invitation_respond_maybe identifier id'>log_invitation_respond_maybe</span>
+  <span class='Activity constant id'>Activity</span><span class='dot token'>.</span><span class='log identifier id'>log</span><span class='lparen token'>(</span><span class='event identifier id'>event</span><span class='comma token'>,</span> <span class='symbol val'>:respond_maybe</span><span class='comma token'>,</span> <span class='self self kw'>self</span><span class='comma token'>,</span> <span class='invited_user identifier id'>invited_user</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="log_invitation_respond_no-instance_method">
+  
+    - (<tt>Object</tt>) <strong>log_invitation_respond_no</strong>  <span class="extras">(private)</span>
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+80
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/invitation.rb', line 80</span>
+
+<span class='def def kw'>def</span> <span class='log_invitation_respond_no identifier id'>log_invitation_respond_no</span>
+  <span class='Activity constant id'>Activity</span><span class='dot token'>.</span><span class='log identifier id'>log</span><span class='lparen token'>(</span><span class='event identifier id'>event</span><span class='comma token'>,</span> <span class='symbol val'>:respond_no</span><span class='comma token'>,</span> <span class='self self kw'>self</span><span class='comma token'>,</span> <span class='invited_user identifier id'>invited_user</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="log_invitation_respond_yes-instance_method">
+  
+    - (<tt>Object</tt>) <strong>log_invitation_respond_yes</strong>  <span class="extras">(private)</span>
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/invitation.rb', line 76</span>
+
+<span class='def def kw'>def</span> <span class='log_invitation_respond_yes identifier id'>log_invitation_respond_yes</span>
+  <span class='Activity constant id'>Activity</span><span class='dot token'>.</span><span class='log identifier id'>log</span><span class='lparen token'>(</span><span class='event identifier id'>event</span><span class='comma token'>,</span> <span class='symbol val'>:respond_yes</span><span class='comma token'>,</span> <span class='self self kw'>self</span><span class='comma token'>,</span> <span class='invited_user identifier id'>invited_user</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="serializable_hash-instance_method">
+  
+    - (<tt>Object</tt>) <strong>serializable_hash</strong>(options = nil) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/invitation.rb', line 54</span>
+
+<span class='def def kw'>def</span> <span class='serializable_hash identifier id'>serializable_hash</span><span class='lparen token'>(</span><span class='options identifier id'>options</span> <span class='assign token'>=</span> <span class='nil nil kw'>nil</span><span class='rparen token'>)</span>
+  <span class='options identifier id'>options</span> <span class='opasgn op'>||=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+  <span class='options identifier id'>options</span> <span class='assign token'>=</span> <span class='options identifier id'>options</span><span class='dot token'>.</span><span class='merge identifier id'>merge</span><span class='lparen token'>(</span><span class='symbol val'>:include</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:invited_identity</span><span class='rparen token'>)</span>
+
+  <span class='unless unless kw'>unless</span> <span class='invited_user identifier id'>invited_user</span> <span class='eq op'>==</span> <span class='User constant id'>User</span><span class='dot token'>.</span><span class='current identifier id'>current</span>
+    <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:except</span><span class='rbrack token'>]</span> <span class='opasgn op'>||=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+    <span class='options identifier id'>options</span><span class='lbrack token'>[</span><span class='symbol val'>:except</span><span class='rbrack token'>]</span> <span class='opasgn op'>+=</span> <span class='PRIVATE_ATTRIBUTES constant id'>PRIVATE_ATTRIBUTES</span>
+  <span class='end end kw'>end</span>
+
+  <span class='super super kw'>super</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Fri Jun 24 02:19:56 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.7.2 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

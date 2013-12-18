@@ -1,0 +1,942 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: ApplicationController
+  
+    &mdash; Documentation by YARD 0.7.2
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (A)</a> &raquo; 
+    
+    
+    <span class="title">ApplicationController</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: ApplicationController
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">ActionController::Base</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActionController::Base</li>
+          
+            <li class="next">ApplicationController</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2">InheritedResources::DSL</dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">app/controllers/application_controller.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="PagesController.html" title="PagesController (class)">PagesController</a></span></p>
+</div>
+
+
+  
+  
+
+
+  
+  
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#after_sign_in-instance_method" title="#after_sign_in (instance method)">- (Object) <strong>after_sign_in</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Clear invitation token from session to ensure <tt>current_ability</tt> be
+created for the user who just signed in, in the next request.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#clean_params-instance_method" title="#clean_params (instance method)">- (Object) <strong>clean_params</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#current_ability-instance_method" title="#current_ability (instance method)">- (Object) <strong>current_ability</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Ability for the current visitor.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#current_identity-instance_method" title="#current_identity (instance method)">- (Object) <strong>current_identity</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Identity of current user for the current event.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#load_current_invitation-instance_method" title="#load_current_invitation (instance method)">- (Object) <strong>load_current_invitation</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Load current invitation if there’s invitation token stored in session, or
+clear it if invitation token no longer available.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#render_error-instance_method" title="#render_error (instance method)">- (Object) <strong>render_error</strong>(exception) </a>
+    
+
+    
+  </span>
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#render_forbidden-instance_method" title="#render_forbidden (instance method)">- (Object) <strong>render_forbidden</strong>(exception) </a>
+    
+
+    
+  </span>
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#render_not_found-instance_method" title="#render_not_found (instance method)">- (Object) <strong>render_not_found</strong>(exception) </a>
+    
+
+    
+  </span>
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#set_gettext_locale-instance_method" title="#set_gettext_locale (instance method)">- (Object) <strong>set_gettext_locale</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Set current locale to :zh_CN in controller thread.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#sign_in-instance_method" title="#sign_in (instance method)">- (Object) <strong>sign_in</strong>(resource_or_scope, *args) </a>
+    
+
+    
+  </span>
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Override Devise’s <tt>sign_in</tt> helper to get an
+<tt>after_sign_in</tt> callback.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#store_invitation_token-instance_method" title="#store_invitation_token (instance method)">- (Object) <strong>store_invitation_token</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Store invitation token to session when visit any page with
+:invitation_token parameter.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="after_sign_in-instance_method">
+  
+    - (<tt>Object</tt>) <strong>after_sign_in</strong>  <span class="extras">(private)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Clear invitation token from session to ensure <tt>current_ability</tt> be
+created for the user who just signed in, in the next request.</p>
+
+<p>We’re not going to clear <tt>Invitation.current</tt> since it may be used
+in current request later, to check if it’s a “sign up via invitation”
+case.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="PasswordsController.html#update-instance_method" title="PasswordsController#update (method)">PasswordsController#update</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+143
+144
+145</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/application_controller.rb', line 143</span>
+
+<span class='def def kw'>def</span> <span class='after_sign_in identifier id'>after_sign_in</span>
+  <span class='session identifier id'>session</span><span class='dot token'>.</span><span class='delete identifier id'>delete</span> <span class='symbol val'>:invitation_token</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="clean_params-instance_method">
+  
+    - (<tt>Object</tt>) <strong>clean_params</strong>  <span class="extras">(private)</span>
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67
+68
+69</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/application_controller.rb', line 65</span>
+
+<span class='def def kw'>def</span> <span class='clean_params identifier id'>clean_params</span>
+  <span class='params identifier id'>params</span><span class='dot token'>.</span><span class='reject identifier id'>reject</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='key identifier id'>key</span><span class='comma token'>,</span> <span class='value identifier id'>value</span><span class='bitor op'>|</span>
+    <span class='dstring node'>%w(controller action format api_key)</span><span class='dot token'>.</span><span class='include? fid id'>include?</span><span class='lparen token'>(</span><span class='key identifier id'>key</span><span class='rparen token'>)</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="current_ability-instance_method">
+  
+    - (<tt>Object</tt>) <strong>current_ability</strong>  <span class="extras">(private)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Ability for the current visitor.</p>
+
+<p>Ability can be initialized for a User or an Invitation. Ability for
+Invitation represent abilities of a visitor who access Exfe with an
+invitation token.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="Ability.html#initialize-instance_method" title="Ability#initialize (method)">Ability#initialize</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+103
+104
+105
+106
+107
+108
+109</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/application_controller.rb', line 103</span>
+
+<span class='def def kw'>def</span> <span class='current_ability identifier id'>current_ability</span>
+  <span class='@current_ability ivar id'>@current_ability</span> <span class='opasgn op'>||=</span> <span class='if if kw'>if</span> <span class='Invitation constant id'>Invitation</span><span class='dot token'>.</span><span class='current identifier id'>current</span>
+                         <span class='Ability constant id'>Ability</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='Invitation constant id'>Invitation</span><span class='dot token'>.</span><span class='current identifier id'>current</span><span class='rparen token'>)</span>
+                       <span class='else else kw'>else</span>
+                         <span class='Ability constant id'>Ability</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='current_user identifier id'>current_user</span><span class='rparen token'>)</span>
+                       <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="current_identity-instance_method">
+  
+    - (<tt>Object</tt>) <strong>current_identity</strong>  <span class="extras">(private)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Identity of current user for the current event.</p>
+
+<p>If there’s no current event in the current context, return default
+identity of current user.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+115
+116
+117
+118
+119
+120
+121
+122
+123</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/application_controller.rb', line 115</span>
+
+<span class='def def kw'>def</span> <span class='current_identity identifier id'>current_identity</span>
+  <span class='return return kw'>return</span> <span class='unless unless_mod kw'>unless</span> <span class='current_user identifier id'>current_user</span>
+
+  <span class='if if kw'>if</span> <span class='@event ivar id'>@event</span>
+    <span class='current_user identifier id'>current_user</span><span class='dot token'>.</span><span class='identity_for identifier id'>identity_for</span><span class='lparen token'>(</span><span class='@event ivar id'>@event</span><span class='rparen token'>)</span>
+  <span class='else else kw'>else</span>
+    <span class='current_user identifier id'>current_user</span><span class='dot token'>.</span><span class='identity identifier id'>identity</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="load_current_invitation-instance_method">
+  
+    - (<tt>Object</tt>) <strong>load_current_invitation</strong>  <span class="extras">(private)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Load current invitation if there’s invitation token stored in session, or
+clear it if invitation token no longer available.</p>
+
+<p>Current invitation will be used when:</p>
+<ul><li>
+<p>Visit event page.</p>
+</li><li>
+<p>Signup as an invited user.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="RegistrationsController.html#new-instance_method" title="RegistrationsController#new (method)">RegistrationsController#new</a></span></li>
+    
+      <li><span class='object_link'><a href="PasswordsController.html#edit-instance_method" title="PasswordsController#edit (method)">PasswordsController#edit</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+89
+90
+91
+92
+93
+94
+95</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/application_controller.rb', line 89</span>
+
+<span class='def def kw'>def</span> <span class='load_current_invitation identifier id'>load_current_invitation</span>
+  <span class='Invitation constant id'>Invitation</span><span class='dot token'>.</span><span class='current identifier id'>current</span> <span class='assign token'>=</span> <span class='if if kw'>if</span> <span class='session identifier id'>session</span><span class='lbrack token'>[</span><span class='symbol val'>:invitation_token</span><span class='rbrack token'>]</span>
+                         <span class='Invitation constant id'>Invitation</span><span class='dot token'>.</span><span class='find_by_token identifier id'>find_by_token</span><span class='lparen token'>(</span><span class='session identifier id'>session</span><span class='lbrack token'>[</span><span class='symbol val'>:invitation_token</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+                       <span class='else else kw'>else</span>
+                         <span class='nil nil kw'>nil</span>
+                       <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="render_error-instance_method">
+  
+    - (<tt>Object</tt>) <strong>render_error</strong>(exception)  <span class="extras">(private)</span>
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/application_controller.rb', line 20</span>
+
+<span class='def def kw'>def</span> <span class='render_error identifier id'>render_error</span><span class='lparen token'>(</span><span class='exception identifier id'>exception</span><span class='rparen token'>)</span>
+  <span class='logger identifier id'>logger</span><span class='dot token'>.</span><span class='fatal identifier id'>fatal</span> <span class='exception identifier id'>exception</span>
+  <span class='logger identifier id'>logger</span><span class='dot token'>.</span><span class='fatal identifier id'>fatal</span> <span class='exception identifier id'>exception</span><span class='dot token'>.</span><span class='backtrace identifier id'>backtrace</span><span class='dot token'>.</span><span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>&quot;\n&quot;</span><span class='rparen token'>)</span>
+
+  <span class='respond_to identifier id'>respond_to</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='format identifier id'>format</span><span class='bitor op'>|</span>
+    <span class='format identifier id'>format</span><span class='dot token'>.</span><span class='html identifier id'>html</span> <span class='do do kw'>do</span>
+      <span class='render identifier id'>render</span> <span class='string val'>'pages/error'</span><span class='comma token'>,</span> <span class='symbol val'>:status</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:internal_server_error</span>
+    <span class='end end kw'>end</span>
+
+    <span class='format identifier id'>format</span><span class='dot token'>.</span><span class='json identifier id'>json</span> <span class='do do kw'>do</span>
+      <span class='render identifier id'>render</span> <span class='symbol val'>:json</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span><span class='symbol val'>:error</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'Internal server error.'</span><span class='rbrace token'>}</span>
+    <span class='end end kw'>end</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="render_forbidden-instance_method">
+  
+    - (<tt>Object</tt>) <strong>render_forbidden</strong>(exception)  <span class="extras">(private)</span>
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/application_controller.rb', line 50</span>
+
+<span class='def def kw'>def</span> <span class='render_forbidden identifier id'>render_forbidden</span><span class='lparen token'>(</span><span class='exception identifier id'>exception</span><span class='rparen token'>)</span>
+  <span class='logger identifier id'>logger</span><span class='dot token'>.</span><span class='fatal identifier id'>fatal</span> <span class='exception identifier id'>exception</span>
+  <span class='logger identifier id'>logger</span><span class='dot token'>.</span><span class='fatal identifier id'>fatal</span> <span class='exception identifier id'>exception</span><span class='dot token'>.</span><span class='backtrace identifier id'>backtrace</span><span class='dot token'>.</span><span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>&quot;\n&quot;</span><span class='rparen token'>)</span>
+
+  <span class='respond_to identifier id'>respond_to</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='format identifier id'>format</span><span class='bitor op'>|</span>
+    <span class='format identifier id'>format</span><span class='dot token'>.</span><span class='html identifier id'>html</span> <span class='do do kw'>do</span>
+      <span class='render identifier id'>render</span> <span class='string val'>'pages/forbidden'</span><span class='comma token'>,</span> <span class='symbol val'>:status</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:forbidden</span>
+    <span class='end end kw'>end</span>
+
+    <span class='format identifier id'>format</span><span class='dot token'>.</span><span class='json identifier id'>json</span> <span class='do do kw'>do</span>
+      <span class='render identifier id'>render</span> <span class='symbol val'>:json</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span><span class='symbol val'>:error</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'Forbidden.'</span><span class='rbrace token'>}</span>
+    <span class='end end kw'>end</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="render_not_found-instance_method">
+  
+    - (<tt>Object</tt>) <strong>render_not_found</strong>(exception)  <span class="extras">(private)</span>
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/application_controller.rb', line 35</span>
+
+<span class='def def kw'>def</span> <span class='render_not_found identifier id'>render_not_found</span><span class='lparen token'>(</span><span class='exception identifier id'>exception</span><span class='rparen token'>)</span>
+  <span class='logger identifier id'>logger</span><span class='dot token'>.</span><span class='fatal identifier id'>fatal</span> <span class='exception identifier id'>exception</span>
+  <span class='logger identifier id'>logger</span><span class='dot token'>.</span><span class='fatal identifier id'>fatal</span> <span class='exception identifier id'>exception</span><span class='dot token'>.</span><span class='backtrace identifier id'>backtrace</span><span class='dot token'>.</span><span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>&quot;\n&quot;</span><span class='rparen token'>)</span>
+
+  <span class='respond_to identifier id'>respond_to</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='format identifier id'>format</span><span class='bitor op'>|</span>
+    <span class='format identifier id'>format</span><span class='dot token'>.</span><span class='html identifier id'>html</span> <span class='do do kw'>do</span>
+      <span class='render identifier id'>render</span> <span class='string val'>'pages/not_found'</span><span class='comma token'>,</span> <span class='symbol val'>:status</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:not_found</span>
+    <span class='end end kw'>end</span>
+
+    <span class='format identifier id'>format</span><span class='dot token'>.</span><span class='json identifier id'>json</span> <span class='do do kw'>do</span>
+      <span class='render identifier id'>render</span> <span class='symbol val'>:json</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span><span class='symbol val'>:error</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'Not found.'</span><span class='rbrace token'>}</span>
+    <span class='end end kw'>end</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="set_gettext_locale-instance_method">
+  
+    - (<tt>Object</tt>) <strong>set_gettext_locale</strong>  <span class="extras">(private)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Set current locale to :zh_CN in controller thread.</p>
+
+<p>This is required since the fast_gettext initializer runs in different
+thread.</p>
+
+<p>If need set locale based on HTTP_ACCEPT_LANGUAGE, just remove this method
+so the one defined in gettext_i18n_rails will be used.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+153
+154
+155</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/application_controller.rb', line 153</span>
+
+<span class='def def kw'>def</span> <span class='set_gettext_locale identifier id'>set_gettext_locale</span>
+  <span class='FastGettext constant id'>FastGettext</span><span class='dot token'>.</span><span class='locale identifier id'>locale</span> <span class='assign token'>=</span> <span class='symbol val'>:zh_CN</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="sign_in-instance_method">
+  
+    - (<tt>Object</tt>) <strong>sign_in</strong>(resource_or_scope, *args)  <span class="extras">(private)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Override Devise’s <tt>sign_in</tt> helper to get an
+<tt>after_sign_in</tt> callback.</p>
+
+<p>We may should use Warden’s <tt>after_authentication</tt> callback, but it
+only be called after explicitly sign in via the sign in form, and we want
+<tt>after_sign_in</tt> be called after user sign in via any method, include
+the sign in form, sign up, reset password, etc.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+131
+132
+133
+134</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/application_controller.rb', line 131</span>
+
+<span class='def def kw'>def</span> <span class='sign_in identifier id'>sign_in</span><span class='lparen token'>(</span><span class='resource_or_scope identifier id'>resource_or_scope</span><span class='comma token'>,</span> <span class='mult op'>*</span><span class='args identifier id'>args</span><span class='rparen token'>)</span>
+  <span class='super super kw'>super</span>
+  <span class='after_sign_in identifier id'>after_sign_in</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="store_invitation_token-instance_method">
+  
+    - (<tt>Object</tt>) <strong>store_invitation_token</strong>  <span class="extras">(private)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Store invitation token to session when visit any page with
+:invitation_token parameter.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+73
+74
+75
+76
+77</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/application_controller.rb', line 73</span>
+
+<span class='def def kw'>def</span> <span class='store_invitation_token identifier id'>store_invitation_token</span>
+  <span class='if if kw'>if</span> <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:invitation_token</span><span class='rbrack token'>]</span>
+    <span class='session identifier id'>session</span><span class='lbrack token'>[</span><span class='symbol val'>:invitation_token</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:invitation_token</span><span class='rbrack token'>]</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Fri Jun 24 02:19:56 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.7.2 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

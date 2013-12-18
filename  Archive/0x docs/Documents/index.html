@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.7.2
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html" title="Index">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><div id='filecontents'><h1>Run Rails server</h1>
+
+<pre class="code"><span class='bundle identifier id'>bundle</span> <span class='install identifier id'>install</span>
+<span class='cp identifier id'>cp</span> <span class='config identifier id'>config</span><span class='div op'>/</span><span class='database identifier id'>database</span><span class='dot token'>.</span><span class='yml identifier id'>yml</span><span class='dot token'>.</span><span class='example identifier id'>example</span> <span class='config identifier id'>config</span><span class='div op'>/</span><span class='database identifier id'>database</span><span class='dot token'>.</span><span class='yml identifier id'>yml</span>
+<span class='comment val'># Edit database.yml</span>
+<span class='comment val'># Install ImageMagick via package manager or source code</span>
+<span class='rails identifier id'>rails</span> <span class='s identifier id'>s</span>
+</pre>
+
+<h1>Run Redis server &amp; Resque workers via God</h1>
+
+<pre class="code"><span class='cp identifier id'>cp</span> <span class='config identifier id'>config</span><span class='div op'>/</span><span class='config identifier id'>config</span><span class='dot token'>.</span><span class='god identifier id'>god</span><span class='dot token'>.</span><span class='example identifier id'>example</span> <span class='config identifier id'>config</span><span class='div op'>/</span><span class='config identifier id'>config</span><span class='dot token'>.</span><span class='god identifier id'>god</span>
+<span class='cp identifier id'>cp</span> <span class='config identifier id'>config</span><span class='div op'>/</span><span class='config identifier id'>config</span><span class='dot token'>.</span><span class='yml identifier id'>yml</span><span class='dot token'>.</span><span class='example identifier id'>example</span> <span class='config identifier id'>config</span><span class='div op'>/</span><span class='config identifier id'>config</span><span class='dot token'>.</span><span class='yml identifier id'>yml</span>
+<span class='cp identifier id'>cp</span> <span class='config identifier id'>config</span><span class='div op'>/</span><span class='redis identifier id'>redis</span><span class='dot token'>.</span><span class='conf identifier id'>conf</span><span class='dot token'>.</span><span class='example identifier id'>example</span> <span class='config identifier id'>config</span><span class='div op'>/</span><span class='redis identifier id'>redis</span><span class='dot token'>.</span><span class='conf identifier id'>conf</span>
+<span class='comment val'># Edit above configuration files</span>
+<span class='god identifier id'>god</span> <span class='minus op'>-</span><span class='c identifier id'>c</span> <span class='config identifier id'>config</span><span class='div op'>/</span><span class='config identifier id'>config</span><span class='dot token'>.</span><span class='god identifier id'>god</span>
+</pre>
+
+<h1>Run RSpec specs with Spork</h1>
+
+<ul>
+<li><p>One time with all specs.</p>
+
+<pre class="code"><span class='rake identifier id'>rake</span> <span class='spec identifier id'>spec</span>
+</pre></li>
+<li><p>Watch source files change and run related specs automatically. Press <code>Ctrl - \</code> to run all specs.</p>
+
+<pre class="code"><span class='bundle identifier id'>bundle</span> <span class='exec identifier id'>exec</span> <span class='guard identifier id'>guard</span>
+</pre></li>
+</ul>
+
+<h1>Generate and view documentation</h1>
+
+<ul>
+<li><p>Documentation from source code (RDoc).</p>
+
+<pre class="code"><span class='yard identifier id'>yard</span>
+<span class='open identifier id'>open</span> <span class='doc identifier id'>doc</span><span class='div op'>/</span><span class='index identifier id'>index</span><span class='dot token'>.</span><span class='html identifier id'>html</span>
+</pre></li>
+<li><p>Entity-relationship diagram.</p>
+
+<pre class="code"><span class='comment val'># Install graphviz via package manager or source code</span>
+<span class='rake identifier id'>rake</span> <span class='erd identifier id'>erd</span> <span class='orientation identifier id'>orientation</span><span class='assign token'>=</span><span class='vertical identifier id'>vertical</span>
+<span class='open identifier id'>open</span> <span class='ERD constant id'>ERD</span><span class='dot token'>.</span><span class='pdf identifier id'>pdf</span>
+</pre></li>
+</ul>
+
+<h1>Deployment</h1>
+
+<ul>
+<li><p>To production server.</p>
+
+<pre class="code"><span class='cap identifier id'>cap</span> <span class='production identifier id'>production</span> <span class='deploy identifier id'>deploy</span><span class='symbol val'>:migrations</span>
+</pre></li>
+</ul>
+</div></div>
+    
+    <div id="footer">
+  Generated on Fri Jun 24 02:19:54 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.7.2 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

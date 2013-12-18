@@ -1,0 +1,365 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+<p>
+采用4sq的api矩阵方式组织本api文档。其中 Objects为基本对象，General为基本操作，Aspects为某基本对象钻取之后获得的其他对象，也可以理解为对象关系。Actions为其他动作，目前比较简单，空缺。
+</p>
+<table border=1>
+    <tr>
+	<td>Objects</td>
+	<td>General</td>
+	<td>Aspects</td>
+	<td>Actions</td>
+    </tr>
+    <tr>
+	<td><a href="#users">users</a></td>
+	<td><a href="#users_signup">signup</a></br><a href="#users_login">login</a></td>
+	<td><a href="#users_crosses">crosses</a></br><a href="#users_conversation">conversation</a></br><a href="#users_update">update</a></td>
+	<td><a href="#users_rsvp">rsvp</a></td>
+    </tr>
+    <tr>
+	<td><a href="#crosses">crosses</a></td>
+	<td><a href="#crosses_new">new</a></br><a href="#crosses_edit">edit</a></td>
+	<td></td>
+	<td></td>
+    </tr>
+    <tr>
+	<td><a href="#conversation">conversation</a></td>
+	<td><a href="#conversation_new">new</a></td>
+	<td></td>
+	<td></td>
+    </tr>
+</table>
+
+<hr>
+<h1><a name="users">API Users</a></h1>
+
+<table border=1>
+<tr>
+<td>Class</td><td>Users </td>
+</tr>
+<tr>
+<td>Endpoint</td><td>users</td>
+</tr>
+<tr>
+<td>URL</td><td>http://api.0d0f.net/v1/users/USER_ID</td>
+</tr>
+<tr>
+<td>HTTP Method</td><td>GET</td>
+</tr>
+<tr>
+<td>Requires Authentication</td><td>Yes</td>
+</tr>
+</table>
+<h2>说明</h2>
+<p>返回给定的用户基本信息（未来会加入更多信息，比如用户的最新评论，用户最近发起的/参加的活动等，目前暂时不考虑这些）</p>
+<h2>输入参数</h2>
+<table border=1>
+<tr>
+<td>USER_ID</td><td>用户ID，如果传入self就是自己</td>
+</tr>
+</table>
+<h2>返回信息</h2>
+<p>user object</p>
+<hr>
+
+
+<h1><a name="users_signup">API Users Signup</a></h1>
+
+<table border=1>
+<tr>
+<td>Class</td><td>Users </td>
+</tr>
+<tr>
+<td>Endpoint</td><td>signup</td>
+</tr>
+<tr>
+<td>URL</td><td>http://api.0d0f.net/v1/users/signup</td>
+</tr>
+<tr>
+<td>HTTP Method</td><td>POST</td>
+</tr>
+<tr>
+<td>Requires Authentication</td><td>No</td>
+</tr>
+</table>
+
+<h2>说明</h2>
+<p> 用户注册 </p>
+<h2>输入参数</h2>
+<table border=1>
+<tr>
+<td>email</td><td>用户登录用的email地址</td>
+</tr>
+<tr>
+<td>password</td><td>用户的密码</td>
+</tr>
+</table>
+
+<h2>返回信息</h2>
+<p>user object刚刚添加的用户基本信息</p>
+<hr>
+<h1><a name="users_login">API Users Login</a></h1>
+
+<table border=1>
+<tr>
+<td>Class</td><td>Users </td>
+</tr>
+<tr>
+<td>Endpoint</td><td>login</td>
+</tr>
+<tr>
+<td>URL</td><td>http://api.0d0f.net/v1/users/login</td>
+</tr>
+<tr>
+<td>HTTP Method</td><td>POST</td>
+</tr>
+<tr>
+<td>Requires Authentication</td><td>No</td>
+</tr>
+</table>
+<h2>说明</h2>
+<p>用户登录</p>
+<h2>输入参数</h2>
+<table border=1>
+<tr>
+<td>email</td><td>用户登录用的email地址</td>
+</tr>
+<tr>
+<td>password</td><td>用户的密码</td>
+</tr>
+<tr>
+<td>token</td><td>通过key登录</td>
+</tr>
+</table>
+
+<h2>返回信息</h2>
+<p>user object，包含token用于以后访问需要验证的页面</p>
+<hr>
+<h1><a name="users_crosses">API Users Crosses</a></h1>
+
+<table border=1>
+<tr>
+<td>Class</td><td>Users </td>
+</tr>
+<tr>
+<td>Endpoint</td><td>crosses</td>
+</tr>
+<tr>
+<td>URL</td><td>http://api.0d0f.net/v1/users/USER_ID/crosses</td>
+</tr>
+<tr>
+<td>HTTP Method</td><td>GET</td>
+</tr>
+<tr>
+<td>Requires Authentication</td><td>YES</td>
+</tr>
+</table>
+<h2>说明</h2>
+<p>返回用户的crosses历史，包括创建的和参加的</p>
+<h2>输入参数</h2>
+<p>所有参数都可选<p>
+<table border=1>
+<tr>
+<td>USER_ID </td><td>目前可考虑只支持self，默认为self</td>
+</tr>
+<tr>
+<td>limit</td><td>结果数量</td>
+</tr>
+<tr>
+<td>offset </td><td>用来分页的偏移</td>
+</tr>
+</table>
+
+<h2>返回信息</h2>
+<p>crosses object 一个crosses object组成的列表</p>
+<hr>
+<h1><a name="users_rsvp">API Users RSVP</a></h1>
+
+<table border=1>
+<tr>
+<td>Class</td><td>Users </td>
+</tr>
+<tr>
+<td>Endpoint</td><td>CROSS_ID</td>
+</tr>
+<tr>
+<td>URL</td><td>http://api.0d0f.net/v1/CROSS_ID/RSVP</td>
+</tr>
+<tr>
+<td>HTTP Method</td><td>GET</td>
+</tr>
+<tr>
+<td>Requires Authentication</td><td>YES</td>
+</tr>
+</table>
+<h2>说明</h2>
+<p>提交用户对给定CROSS_ID的RSVP状态</p>
+<h2>输入参数</h2>
+<table border=1>
+<tr>
+<td>CROSS_ID</td><td>目前是Cross的HashID，未来也会是别名（同网页行为）</td>
+</tr>
+<tr>
+<td>RSVP</td><td>yes/no/maybe，用来表示用户rsvp状态</td>
+</tr>
+</table>
+
+<h2>返回信息</h2>
+<p>cross object 给定CROSS_ID对应的cross object</p>
+<hr>
+<h1><a name="users_conversation">API Users Conversation<a/></h1>
+<table border=1>
+<tr>
+<td>Class</td><td>Users </td>
+</tr>
+<tr>
+<td>Endpoint</td><td>conversation</td>
+</tr>
+<tr>
+<td>URL</td><td>http://api.0d0f.net/v1/users/USER_ID/conversation</td>
+</tr>
+<tr>
+<td>HTTP Method</td><td>GET</td>
+</tr>
+<tr>
+<td>Requires Authentication</td><td>YES</td>
+</tr>
+</table>
+<h2>说明</h2>
+<p>返回用户的conversation记录，包括用户发过的评论的和被别人回复的评论（所谓回复有两种，一种是用户发起的conversation中有人回复，另外一种是有人@到该用户。后者可暂不支持）</p>
+<h2>输入参数</h2>
+<p>所有参数都可选<p>
+<table border=1>
+<tr> <td>USER_ID </td><td>目前可考虑只支持self，默认为self</td> </tr>
+<tr> <td>limit</td><td>结果数量</td> </tr>
+<tr> <td>offset </td><td>用来分页的偏移</td> </tr>
+</table>
+
+<h2>返回信息</h2>
+<p>conversation object 一个conversation object组成的列表</p>
+
+<hr>
+<h1><a name="users_update">API Users Update<a/></h1>
+<table border=1>
+<tr>
+<td>Class</td><td>Users </td>
+</tr>
+<tr>
+<td>Endpoint</td><td>update</td>
+</tr>
+<tr>
+<td>URL</td><td>http://api.0d0f.net/v1/users/USER_ID/update</td>
+</tr>
+<tr>
+<td>HTTP Method</td><td>GET</td>
+</tr>
+<tr>
+<td>Requires Authentication</td><td>YES</td>
+</tr>
+</table>
+<h2>说明</h2>
+<p>返回和给定用户有关的最新动态。包括：发起活动所邀请的其他人参与状态更新和评论增加，其他活动中和给定用户有关的信息（如评论中@该用户，这部分可暂不支持）</p>
+<h2>输入参数</h2>
+<p>所有参数都可选<p>
+<table border=1>
+<tr> <td>USER_ID </td><td>目前可考虑只支持self，默认为self</td> </tr>
+<tr> <td>limit</td><td>结果数量</td> </tr>
+<tr> <td>offset </td><td>用来分页的偏移</td> </tr>
+</table>
+
+<h2>返回信息</h2>
+<p>updat object 一个update object组成的列表</p>
+
+<hr>
+<h1><a name="crosses">API Crosses</a></h1>
+<table border=1>
+<tr> <td>Class</td><td>Crosses</td> </tr>
+<tr> <td>Endpoint</td><td>Crosses</td> </tr>
+<tr> <td>URL</td><td>http://api.0d0f.net/v1/crosses/CROSS_ID</td> </tr>
+<tr> <td>HTTP Method</td><td>GET</td> </tr>
+<tr> <td>Requires Authentication</td><td>Maybe</td> </tr>
+</table>
+<h2>说明</h2>
+<p>返回给定cross情况，包括基本信息，报名情况。根据cross设置的属性决定是否需要登陆才能访问。</p>
+<h2>输入参数</h2>
+<table border=1>
+<tr> <td>CROSS_ID</td><td>目前是Cross的ID(不是hashid)，未来也会是别名（同网页行为）</td> </tr>
+</table>
+<hr>
+
+
+<h2>返回信息</h2>
+<p>Cross object</p>
+<hr>
+
+<h1><a name="crosses_new">API Cross New</a></h1>
+<table border=1>
+<tr> <td>Class</td><td>Cross</td> </tr>
+<tr> <td>Endpoint</td><td>new</td> </tr>
+<tr> <td>URL</td><td>http://api.0d0f.net/v1/crosses/new</td> </tr>
+<tr> <td>HTTP Method</td><td>POST</td> </tr>
+<tr> <td>Requires Authentication</td><td>YES</td> </tr>
+</table>
+<h2>说明</h2>
+<p>创建Cross</p>
+<h2>输入参数</h2>
+<table border=1>
+<tr> <td>Title</td><td> 标题</td>
+<tr> <td>Describe</td><td> 描述</td>
+<tr> <td>Date </td><td>日期</td>
+<tr> <td>Time </td><td>时间</td>
+<tr> <td>Location </td><td>地点</td>
+<tr> <td>Invitation </td><td>邀请人列表</td>
+</table>
+<hr>
+<h2>返回信息</h2>
+<p>刚刚创建的Cross object</p>
+<hr>
+<h1><a name="crosses_edit">API Cross Edit</a></h1>
+<p>和Crosses New相同，使用PUT方法<p>
+<hr>
+
+<h1><a name="conversation">API conversation</a> （目前没有真正使用单条conversation的地方）</h1>
+<table border=1>
+<tr> <td>Class</td><td>conversations</td> </tr>
+<tr> <td>Endpoint</td><td>conversation</td> </tr>
+<tr> <td>URL</td><td>http://api.0d0f.net/v1/conversation/CONVERSATION_ID</td> </tr>
+<tr> <td>HTTP Method</td><td>GET</td> </tr>
+<tr> <td>Requires Authentication</td><td>Maybe</td> </tr>
+</table>
+<h2>说明</h2>
+<p>获得给定ID的conversation。</p>
+<h2>输入参数</h2>
+<table border=1>
+<tr> <td>CONVERSATION_ID </td><td>conversation的id</td> </tr>
+</table>
+<hr>
+<h2>返回信息</h2>
+<p>conversation object</p>
+
+<hr>
+
+<h1><a name="conversation_new">API Conversation New</a></h1>
+<table border=1>
+<tr> <td>Class</td><td>Conversation</td> </tr>
+<tr> <td>Endpoint</td><td>new</td> </tr>
+<tr> <td>URL</td><td>http://api.0d0f.net/v1/conversation/new</td> </tr>
+<tr> <td>HTTP Method</td><td>POST</td> </tr>
+<tr> <td>Requires Authentication</td><td>YES</td> </tr>
+</table>
+<h2>说明</h2>
+<p>创建Conversation</p>
+<h2>输入参数</h2>
+<table border=1>
+<tr> <td>content</td><td>conversation内容</td>
+</table>
+<hr>
+<h2>返回信息</h2>
+<p>刚刚创建的conversation object</p>
+<hr>
+</body>
+</html>

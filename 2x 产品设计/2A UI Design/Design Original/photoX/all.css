@@ -1,0 +1,191 @@
+body, html{
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+*{
+	-webkit-font-smoothing:antialiased;
+}
+
+.panel-warpper{
+	position: absolute;
+	top: 100px;
+	left: 100px;
+}
+
+.panel{
+	position: relative;
+	width: 620px;
+	height: 440px;
+	background-color: #222;
+	border-radius: 6px;
+	overflow: hidden;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.panel .header{
+	height: 66px;
+	width: 100%;
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#4c4c4c), to(#808080));
+	background-image: -moz-linear-gradient(90deg, #4c4c4c 0%, #808080 100%);	
+	border-radius: 0 6px 0 0;
+}
+
+.name{
+	height: 66px;
+	color: white;
+	font-weight: bold;
+	font-size: 26px;
+	line-height: 66px;
+	margin-left: 15px;
+}
+
+.tabs{
+	float: right;
+	height: 100%;
+}
+
+.tabs div{
+	width: 66px;
+	height: 100%;
+	display: inline-block;
+	background-image: -webkit-gradient(linear, left bottom, right bottom, from(rgba(0, 0, 0, 0.12)), to(rgba(0, 0, 0, 0)));
+	background-image: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0) 100%);
+
+}
+
+.tabs div:hover{
+	background-color: rgba(255,255,255,0.12);
+}
+
+.tabs div:active{
+	background-color: rgba(0,0,0,0.1);
+}
+
+.tabs .facebook{
+	background: url(facebook.png) no-repeat 50% 50%;
+}
+
+.tabs .facebook.focus:hover{
+	background-color: #3784d5;
+}
+
+
+.tabs .focus{
+	background-color: #3784d5;
+	box-shadow: inset 0px -1px 1px rgba(0,0,0,0.5);
+}
+
+.panel .pathbar{
+	height: 40px;
+	width: 100%;
+	background-color: #4c4c4c;
+	box-shadow: 0 0 0 1px rgba(255,255,255,0.1) inset,
+				0 -1px 0 rgba(0,0,0,0.5);
+	-webkit-transition: all 0.2s ease-in-out 0s;
+}
+
+.panel .footer{
+	position: absolute;
+	bottom: 0;
+	height: 66px;
+	width: 100%;
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#4c4c4c), to(#808080));
+	background-image: -moz-linear-gradient(90deg, #4c4c4c 0%, #808080 100%);
+	
+}
+
+.btn_blue{
+	position: relative;
+	height: 40px;
+	width: 160px;
+	top: 13px;
+	margin: 0 auto;
+	display: block;
+	border-radius: 6px;
+	box-shadow: 0 0 0 1px rgba(0,0,0,0.4),
+				0 1px 0 rgba(0,0,0,.5),
+				0 2px 0 rgba(255,255,255,.25),
+				0 -1px 0 rgba(255,255,255,0.12)inset;
+	border-style: none;
+	font-size: 18px;
+	font-weight: bold;
+	color: #ffffff;
+	line-height: 38px;
+	background: -moz-linear-gradient(90deg, #155ca6 0%, #6bc0fb 100%) #1461a9;
+	background: -webkit-gradient(linear, left bottom, left top, from(#155ca6), to(#6bc0fb)) #1461a9;
+	text-shadow: 0 -1px 0px rgba(0,0,0,0.3);
+}
+
+.btn_blue:hover{
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#1e71c9), to(#6bc0fb));
+	background-image: -moz-linear-gradient(90deg, #1e71c9 0%, #6bc0fb 100%);
+}
+
+.btn_blue:active{
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#115297), to(#44b0fa));
+	background-image: -moz-linear-gradient(90deg, #115297 0%, #44b0fa 100%);
+	box-shadow: 0 0 0 1px rgba(0,0,0,1),
+				0 1px 3px rgba(0,0,0,0.4)inset,
+				0 1px 0 rgba(0,0,0,.5),
+				0 2px 0 rgba(255,255,255,.25);
+	color: hsl(211, 91%, 88%);
+	
+}
+
+.view > div{
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+	position: relative;
+	/background-color: grey;
+}
+
+.panel .album{
+	top: 16px;
+	width: 80px;
+	height: 80px;
+	background-color: #ddd;
+	margin: 0 auto;
+	position: relative;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+	-webkit-transform: rotate(5deg);
+}
+
+.panel .album::before{
+	content: "";
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-color: #eee;
+	position: absolute;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+	-webkit-transform: rotate(-10deg);
+	z-index: -1;
+}
+
+.panel .album::after{
+	content: "";
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	position: absolute;
+	-webkit-transform: rotate(-5deg);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+	background: -moz-linear-gradient(90deg, #e5e5e5 0%, white 100%) white;
+	background: -webkit-gradient(linear, left bottom, left top, from(#e5e5e5), to(white)) white;
+	z-index: -1;
+}
+
+.album-pic{
+	height: 70px;
+	width: 70px;
+	position: absolute;
+	top: 0;
+	left: 25px;
+	top: 21px;
+	background: url(pic1.jpg) no-repeat 50% 50%;
+	background-size: 200% auto;
+	opacity: 0.8;
+}

@@ -1,0 +1,144 @@
+html,bodu{
+	background-color: #fafafa;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+.container{
+	height: 70px;
+	width: 500px;
+	background-color: #e3e3e3;
+	border-radius: 4px;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 100px;
+}
+
+.container:after{
+	content: "";
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	box-shadow: 0px 1px 4px rgba(0,0,0,0.3) inset,
+				0px 0px 0px 1px rgba(0,0,0,0.1) inset;
+	pointer-events: none;
+	border-radius: 4px;
+}
+
+
+.pic-container:hover:after{
+	content: "";
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	background-color: rgba(255,255,255,0.12);
+	pointer-events: none;
+}
+
+.pic-container:active:after{
+	content: "";
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	background-color: rgba(0,0,0,0.05);
+	pointer-events: none;
+}
+
+.pic-container{
+	height:70px ;
+	width: 100%;
+	border-radius: 5px;
+	overflow: hidden;
+	border: 1px solid transparent;
+	margin-top: -1px;
+	margin-left: -1px;
+	white-space: nowrap;
+}
+
+.upload{
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 70;
+	width: 52px;
+	border-radius: 0 2px 2px 0;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.3),
+				0px 0px 0px 1px rgba(0,0,0,0.1);
+	background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(229, 229, 229, 0.95)), to(#fafafa));
+	background-image: -moz-linear-gradient(90deg, rgba(229, 229, 229, 0.95) 0%, #fafafa 100%);
+}
+
+.upload:hover{
+
+	background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.95)), to(white));
+	background-image: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, white 100%);
+}
+
+.upload:active{
+	background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(196, 196, 196, 0.95)), to(#e6e6e6));
+	background-image: -moz-linear-gradient(90deg, rgba(196, 196, 196, 0.95) 0%, #e6e6e6 100%);
+}
+
+
+.photox-logo{
+	height: 26px;
+	width: 30px;
+	margin: 0 auto;
+	margin-top: 22px;
+	background-image: url(photox-logo@2x.png);
+	background-size: 30px,26px;
+	
+}
+
+.pic{
+	height: 100%;
+	display: inline-block;
+	box-shadow: 1px 0px rgba(0,0,0,0.2)inset,
+				-1px 0px rgba(0,0,0,0.2)inset;	
+	margin-right: 3px;
+}
+
+.pic:first-child{
+	/border-radius: 4px 0 0 4px;
+}
+
+.pic-1{
+	width: 100px;	
+	background-size: 100%;
+	background-image: url(img-1.jpg);
+}
+
+
+.nophoto{
+	height: 36px;
+	width: 500px;
+	border-radius: 2px;
+	border: 1px dashed #aaa;
+	line-height: 36px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	color: #aaa;
+	-webkit-transition: all 0.1s ease-in-out 0s;
+	background: url(photox-logo-grey.png) no-repeat 99% 5px;
+	background-size: 30px 26px;
+}
+
+.nophoto:hover{
+	background-color: #eee;
+	color: #3a6ea5;
+	border-style: solid;
+	cursor: pointer;
+	-webkit-transition-duration: 0;
+	border-color: #ccc;
+	background: url(photox-logo.png)no-repeat 99% 5px;
+}
+
+.nophoto:active{
+	background-color: #ccc;
+}
