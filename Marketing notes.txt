@@ -1,0 +1,30 @@
+EXFE Marketing
+
+- Pre-mktg
+- About: What we believe. Why utility. Anti-social. No free lunch. Openness. Recruiting
+- Story: serendipity
+  - series 'Hi stranger'
+- 0d0f codebase
+
+
+* Piloting
+
+* Acquisition
+ - web product pages
+ - partnership
+ - target groups
+ - holiday events
+
+* Activation
+ - getting started
+ - bots
+ - identity weak-up
+
+* Engagement
+ - post gathering services
+ - ·O· services
+ - public ·X·
+ - open API
+
+* Viralty
+ - 
